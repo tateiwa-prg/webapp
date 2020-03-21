@@ -18,6 +18,27 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+//table ヘッダー固定
+function table_header_fixed(){
+  var tableSheet = $('table.sheet');
+  //var offset = tableSheet.offset();
+  $('.fixheader').width(tableSheet.width());
+
+  $(window).scroll(function () {
+      if($(window).scrollTop() > tableSheet.offset().top
+      && $(window).scrollTop() < (tableSheet.offset().top + tableSheet.height() ) ) {
+          var fixheaderTop = $(window).scrollTop();
+          $('.fixheader').show();
+      } else {
+          $('.fixheader').hide();
+      }
+  });
+  $(window).resize(function() {
+      $('.fixheader').width(tableSheet.width());
+  });
+}
+
+
 function everytime(){
   let autho = JSON.parse(localStorage.getItem("autho"));
   let menumap = JSON.parse(sessionStorage.getItem("menumap"));

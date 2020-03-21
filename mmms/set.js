@@ -27,7 +27,7 @@ var val_memory = {}; //val記憶
 var add_memory = {}; //val記憶
 
 function get_floor() {
-  let pass = "mmms/get-set";
+  let pass = "../mmms/get-set";
   let body = {
     type: "floor",
     bukken: bukken_thispage,
@@ -57,7 +57,7 @@ function get_floor() {
     });
 }
 function get_data() {
-  let pass = "mmms/get-set";
+  let pass = "../mmms/get-set";
   let body = {
     type: type_thispage,
     bukken: bukken_thispage,
@@ -205,8 +205,8 @@ function table_body(obj) {
 
     t += "</tr>";
   });
-  console.log("valメモリ", val_memory);
-  console.log("addメモリ", add_memory);
+  //console.log("valメモリ", val_memory);
+  //console.log("addメモリ", add_memory);
   //追加用の行
   if (type_thispage == "gyosha") {
     t += "<tr>";
@@ -305,7 +305,7 @@ function prm_putval(n) {
   return putval;
 }
 function post_request(body) {
-  let pass = "mmms/putdelete-set";
+  let pass = "../mmms/putdelete-set";
   ajax_post(pass, body)
     .done(function(result) {
       console.log("ok", result);
@@ -414,25 +414,3 @@ function modal_open(n) {
   return false;
 }
 
-///////////////////その他function///////////////////
-//table ヘッダー固定
-function table_header_fixed() {
-  var tableSheet = $("table.sheet");
-  //var offset = tableSheet.offset();
-  $(".fixheader").width(tableSheet.width());
-
-  $(window).scroll(function() {
-    if (
-      $(window).scrollTop() > tableSheet.offset().top &&
-      $(window).scrollTop() < tableSheet.offset().top + tableSheet.height()
-    ) {
-      var fixheaderTop = $(window).scrollTop();
-      $(".fixheader").show();
-    } else {
-      $(".fixheader").hide();
-    }
-  });
-  $(window).resize(function() {
-    $(".fixheader").width(tableSheet.width());
-  });
-}

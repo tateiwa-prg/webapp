@@ -186,7 +186,7 @@ function drawgraph(){
         sensor:are
     }
     //console.log(prm);
-    let pass="lorath/get-sensor-data";
+    let pass="../lorath/get-sensor-data";
     ajax_post(pass,prm).done(function(result) {
         //console.log("ok",result);
         redraw(result,nd0,nd1);

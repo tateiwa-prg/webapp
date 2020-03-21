@@ -20,7 +20,7 @@ var device_key;
 
 function get_set_gyosha(){
 
-    let pass="mmms/get-set";
+    let pass="../mmms/get-set";
     let body={
         type:"gyosha",
         bukken:bukken_thispage
@@ -37,7 +37,7 @@ function get_set_gyosha(){
 
 function get_set_dev(){
 
-    let pass="mmms/get-set";
+    let pass="../mmms/get-set";
     let body={
         type:"device",
         bukken:bukken_thispage
@@ -170,7 +170,7 @@ function yoyaku(gyosha_id_1,gyosha_id_2,devid){
 
 
 function post_request(body){
-    let pass="mmms/putdelete-set";
+    let pass="../mmms/putdelete-set";
 
     pprm={
         method: "put",

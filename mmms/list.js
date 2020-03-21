@@ -17,7 +17,7 @@ var nowbukken_JP;
 var type_thispage;
 
 function get_data() {
-  let pass = "mmms/get-listdata";
+  let pass = "../mmms/get-listdata";
   let body = {
     type: type_thispage,
     bukken: bukken_thispage,
@@ -90,25 +90,3 @@ function table_body(obj) {
     return t;
 }
 
-///////////////////その他function///////////////////
-//table ヘッダー固定
-function table_header_fixed() {
-  var tableSheet = $("table.sheet");
-  //var offset = tableSheet.offset();
-  $(".fixheader").width(tableSheet.width());
-
-  $(window).scroll(function() {
-    if (
-      $(window).scrollTop() > tableSheet.offset().top &&
-      $(window).scrollTop() < tableSheet.offset().top + tableSheet.height()
-    ) {
-      var fixheaderTop = $(window).scrollTop();
-      $(".fixheader").show();
-    } else {
-      $(".fixheader").hide();
-    }
-  });
-  $(window).resize(function() {
-    $(".fixheader").width(tableSheet.width());
-  });
-}

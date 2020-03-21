@@ -22,7 +22,7 @@ function signin() {
     pass: password
   };
   //console.log(body_autho);
-  let pass_autho = "autho";
+  let pass_autho = "../autho";
   $("#message span").text("認証確認中");
   ajax_post(pass_autho, body_autho)
     .done(function(result) {

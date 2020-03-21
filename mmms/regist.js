@@ -19,13 +19,13 @@ var b_t;//物件-type
 
 function get_data(){
 
-  let pass="mmms/get-set";
+  let pass="../mmms/get-set";
   let body={
     type:type_thispage,
     bukken:bukkenn_thispage,
   };
   ajax_post(pass,body).done(function(result) {
-    console.log("ok",result);
+    //console.log("ok",result);
     create_table(result);
   }).fail(function(result) {
     console.log("ng",result);
@@ -124,7 +124,7 @@ function request_set(n,method){
   }
 }
 function post_request(body){
-  let pass="mmms/putdelete-set";
+  let pass="../mmms/putdelete-set";
   ajax_post(pass,body).done(function(result) {
       console.log("ok",result);
       alert("更新しました");
@@ -137,32 +137,4 @@ function post_request(body){
 
 }
 
-var kgr="x$t"//区切り文字
-function getParam(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return "";
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-//table ヘッダー固定
-function table_header_fixed(){
-    var tableSheet = $('table.sheet');
-    //var offset = tableSheet.offset();
-    $('.fixheader').width(tableSheet.width());
-  
-    $(window).scroll(function () {
-        if($(window).scrollTop() > tableSheet.offset().top
-        && $(window).scrollTop() < (tableSheet.offset().top + tableSheet.height() ) ) {
-            var fixheaderTop = $(window).scrollTop();
-            $('.fixheader').show();
-        } else {
-            $('.fixheader').hide();
-        }
-    });
-    $(window).resize(function() {
-        $('.fixheader').width(tableSheet.width());
-    });
-}
+

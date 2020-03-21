@@ -166,7 +166,7 @@ function getdata(){
         },
         sensor:sensor_set,
     }
-    let pass="lorath/get-sensor-data";
+    let pass="../lorath/get-sensor-data";
     ajax_post(pass,prm).done(function(result) {
         //console.log("ok",result);
         all_data=result;

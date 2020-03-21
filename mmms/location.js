@@ -48,7 +48,7 @@ function get_js_file_name() {
 
 //業者ごと
 function get_data_gyosha() {
-  let pass = "mmms/"+path_post;
+  let pass = "../mmms/"+path_post;
   //console.log(pass);
   let body = {
     bukken: bukken_thispage,
@@ -67,7 +67,7 @@ function get_data_gyosha() {
 }
 //フロアごと
 function get_data() {
-let pass = "mmms/"+path_post;
+let pass = "../mmms/"+path_post;
 let body = {
   bukken: bukken_thispage,
 };
@@ -240,25 +240,3 @@ $("#p1").css({ top: y + "%", left: x + "%" });
 $("#p2").css({ top: y + 9 + "%", left: x + "%" });
 }
 
-///////////////////その他function///////////////////
-//table ヘッダー固定
-function table_header_fixed() {
-var tableSheet = $("table.sheet");
-//var offset = tableSheet.offset();
-$(".fixheader").width(tableSheet.width());
-
-$(window).scroll(function() {
-  if (
-    $(window).scrollTop() > tableSheet.offset().top &&
-    $(window).scrollTop() < tableSheet.offset().top + tableSheet.height()
-  ) {
-    var fixheaderTop = $(window).scrollTop();
-    $(".fixheader").show();
-  } else {
-    $(".fixheader").hide();
-  }
-});
-$(window).resize(function() {
-  $(".fixheader").width(tableSheet.width());
-});
-}

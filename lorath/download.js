@@ -40,7 +40,7 @@ function dl_csv(){
     }
     //console.log(prm);
 
-    let pass="lorath/get-sensor-data";
+    let pass="../lorath/get-sensor-data";
     ajax_post(pass,prm).done(function(result) {
         //console.log("ok",result);
         let err=result.errorMessage;
@@ -121,23 +121,3 @@ function unix2timeJP(unix){
 }
 
 
-//ajax通信 GET
-function ajax_get(pass) {
-    return $.ajax({
-      contentType: "application/json",
-      dataType: "json",
-      type: "GET",
-      url: pass
-    });
-  }
-  //ajax通信 POST
-  function ajax_post(pass, body) {
-    return $.ajax({
-      contentType: "application/json",
-      data: JSON.stringify(body),
-      dataType: "json",
-      type: "POST",
-      url: pass
-    });
-  }
-  
