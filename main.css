@@ -1,0 +1,362 @@
+/*/////////////メニュー/////////////*/
+.cp_navi {
+	background-color: #ffffff;
+	border: 1px solid #dedede;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	color: #888888;
+	display: block;
+	margin: 1em 1%;
+	overflow: hidden;
+  width: 100%;
+}
+.cp_navi ul {
+	margin: 0;
+	padding: 0;
+}
+.cp_navi ul li {
+	display: inline-block;
+	list-style-type: none;
+	-webkit-transition: all 0.2s;
+	        transition: all 0.2s;
+}
+.cp_navi > ul > li > a > .caret {
+	border-top: 4px solid #aaaaaa;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: '';
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: middle;
+	-webkit-transition: color 0.1s linear;
+	        transition: color 0.1s linear;
+}
+.cp_navi > ul > li > a {
+	color: #aaaaaa;
+	display: block;
+	line-height: 56px;
+	padding: 0 10px;
+	text-decoration: none;
+}
+.cp_navi > ul > li:hover {
+	background-color: #B54A4A;
+}
+.cp_navi > ul > li:hover > a {
+	color: rgb( 255, 255, 255 );
+}
+.cp_navi > ul > li:hover > a > .caret {
+	border-top-color: rgb( 255, 255, 255 );
+}
+.cp_navi > ul > li > div {
+	background-color: #B54A4A;
+	border-top: 0;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	display: none;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: 165px;
+	visibility: hidden;
+	-webkit-transiton: opacity 0.2s;
+	       transition: opacity 0.2s;
+}
+.cp_navi > ul > li:hover > div {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+.cp_navi > ul > li > div ul > li {
+	display: block;
+}
+.cp_navi > ul > li > div ul > li > a {
+	color: #ffffff;
+	display: block;
+	padding: 12px 24px;
+	text-decoration: none;
+}
+.cp_navi > ul > li > div ul > li:hover > a {
+	background-color: rgba( 255, 255, 255, 0.1);
+}
+/*/////////////メニュー/////////////*/
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  margin: 1.5rem auto 3rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 95%;
+}
+#content{
+	text-align: center;
+}
+
+
+input[type="text"] {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	width: 14em;
+	text-align: center;
+	font-size: 1em;
+
+}
+input[type="button"] {
+  font-size: 1.1em;
+  height:2.4em;
+}
+input[type="datetime-local"]{
+	font-size   : 1.5em;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	border-color: rgb(247, 247, 247);
+}
+input[type="number"] {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	text-align: center;
+	width: 4em;
+	font-size: 1em;
+
+}
+select{
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 1.1em;
+}
+  #head_user{
+  line-height:0em;
+  text-align:right;
+  color: #d3d3d3;
+}
+#head_user select{
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	color: #b8b8b8;
+	border:0px;
+	font-size: 0.9em;
+}
+
+
+
+/*/////////////good bad/////////////*/
+input[type="button"].good {
+  /* input要素のうちtype属性値がbuttonのものに対して装飾 */
+  background-image: linear-gradient(0deg, #a7d9f5, #eaf6fd); /* グラデーション */
+  border: 1px solid #3c7fb1; /* 枠線 */
+  border-radius: 0.3em;      /* 角丸 */
+  white-space: pre-line;
+  word-break : break-all;
+}
+mark.good{
+  background-color: #a7d9f5;
+}
+input[type="button"].notgood {
+  /* input要素のうちtype属性値がbuttonのものに対して装飾 */
+  background-image: linear-gradient(0deg, #f4f5a7, #fdfdea); /* グラデーション */
+  border: 1px solid #afb13c; /* 枠線 */
+  border-radius: 0.3em;      /* 角丸 */
+  white-space: pre-line;
+  word-break : break-all;
+}
+mark.notgood{
+  background-color: #f4f5a7;
+}
+input[type="button"].bad {
+  /* input要素のうちtype属性値がbuttonのものに対して装飾 */
+  background-image: linear-gradient(0deg, #f0b9b9, #fdeaea); /* グラデーション */
+  border: 1px solid #b1713c; /* 枠線 */
+  border-radius: 0.3em;      /* 角丸 */
+  white-space: pre-line;
+  word-break : break-all;
+}
+mark.bad{
+  background-color: #f0b9b9;
+}
+/*/////////////good bad/////////////*/
+
+
+/*/////////////デカradio/////////////*/
+#menu{
+  text-align: center;
+}
+#menu fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#menu .radio-inline__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+#menu .radio-inline__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 18px;
+    border-radius: 3px;
+    transition: all .2s;
+    width:6rem;
+}
+#menu .radio-inline__input:checked + .radio-inline__label {
+    background: #B54A4A;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+#menu .radio-inline__input:focus + .radio-inline__label {
+    outline-color: #4D90FE;
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+}
+/*/////////////デカradio/////////////*/
+
+/*/////////////table header/////////////*/
+table.fixheader,table.sheet{
+	text-align: center;
+	background-color: #fafeff;
+}
+table.fixheader th, table.fixheader td,table.sheet th, table.sheet td {
+word-break : break-all;
+border:1px solid rgb(193, 193, 216);
+}
+/*/////////////table header/////////////*/
+
+/*/////////////modal/////////////*/
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+  .modal__bg{
+	background: rgba(0,0,0,0.8);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+  }
+  .modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 4vmin;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 95vmin;
+  }
+  /*/////////////modal/////////////*/
+  
+  /*/////////////map/////////////*/
+  .gazo{
+	position: relative;
+  }
+  .gazo .back {
+	width: 100%;
+  }
+  .gazo .point {
+	position: absolute;/*絶対配置*/
+	width: 10%;
+  }
+  .gazo .pointmoji {
+	position: absolute;/*絶対配置*/
+	font-size: 2.9vmin;
+  }
+  /*/////////////map/////////////*/
+  
+
+/*/////////////kukisen/////////////*/
+.kukisen-container{
+  background: url('https://d2r6wyz4d4typa.cloudfront.net/activeapp/lorath/kukisenzu.png');
+  border: double 0px #505050;
+  width: 99vmin;
+  height: 64vmin;
+  background-size: 99vmin;
+  display: inline-block;
+  text-align: center;
+}
+/*/////////////kukisen/////////////*/
+
+/*/////////////トレンドグラフ/////////////*/
+.chart-container {
+  position: relative;
+  margin: auto;
+  width: 99vmin;
+}
+.trend-table table{
+  border-collapse:collapse;
+  margin:0 auto;
+  text-align: center;
+}
+
+.trend-table td,th{
+  border-top:1px solid #666;
+  padding:10px;
+}
+.trend-table tr:last-child td, tr:last-child th{
+  border-bottom:1px solid #666;  
+}
+/*/////////////トレンドグラフ/////////////*/
+
+/*/////////////drag/////////////*/
+#yoyaku_cont{
+  text-align:left;
+}
+#yoyaku_cont li{
+  display:inline-block;
+}
+#sortable1 {
+  border: 2px solid #eee;
+  width: 95vw;
+  min-height: 3em;
+  list-style-type: none;
+  float: left;
+  margin: 0;
+  
+  padding: 5px 0 0 0;
+  margin: 5px 5px 0px 0px;
+  
+}
+#sortable2 {
+  border: 2px solid rgb(241, 238, 189);
+  width: 95vw;
+  min-height: 3em;
+  list-style-type: none;
+  float: left;
+  margin: 0;
+  
+  padding: 5px 0 0 0;
+  margin: 5px 5px 0px 0px;
+}
+#sortable1 li, #sortable2 li {
+  
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  font-size: 1.1em;
+  height: 2.5em;
+  background: url("https://d2r6wyz4d4typa.cloudfront.net/activeapp/mmms/kss.png") no-repeat;
+  background-size: 3em auto;
+  /**/
+}
+/*/////////////drag/////////////*/
+
+/*/////////////点滅/////////////*/
+
+.blinking{
+	-webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+/*/////////////点滅/////////////*/
